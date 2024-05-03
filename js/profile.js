@@ -114,23 +114,28 @@
                         $('#google-location-section').show(); // Display Get Directions section
                     }
 
-                    // Display the share button
-                    $('#share-button').show();
-                    $('#create-profile-button').show();
-
-                    // Share button functionality
                     $('#share-button').click(function() {
-                        const url = window.location.href;
+                        // Get the current profile data
+                        const profileUrl = window.location.href; // URL of the current profile page
+                        const profileName = $('#full-name').text(); // User's full name
+                        const profileAbout = $('#about').text(); // User's "About" section
+                    
+                        // Prepare the share text
+                        const shareText = `${profileName}: ${profileAbout}`;
+                    
+                        // Use native share functionality if available
                         if (navigator.share) {
                             navigator.share({
-                                title: 'Invitx Profile',
-                                text: 'Check out this profile!',
-                                url: url
-                            });
+                                title: `${profileName} | Invitx Profile`,
+                                text: shareText,
+                                url: profileUrl,
+                            }).catch((error) => console.error("Error sharing:", error));
                         } else {
-                            prompt('Copy this link to share:', url);
+                            // Fallback for browsers without native share (prompt to copy the URL)
+                            alert(`Share this profile: ${profileUrl}`);
                         }
                     });
+                    
                     $('#create-profile-button').click(function() {
                         window.location.href = 'index.html'; // Redirect to the index page
                     });
