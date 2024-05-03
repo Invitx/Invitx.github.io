@@ -25,7 +25,7 @@ $('#sign-up-form').submit(function(e) {
         }
     auth.createUserWithEmailAndPassword(email, password)
         .then((userCredential) => {
-            alert("Sign-up successful!");
+            window.location.href = 'create_profile.html';
             // Redirect or perform additional actions after successful sign-up
         })
         .catch((error) => {
