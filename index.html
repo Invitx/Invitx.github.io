@@ -2,11 +2,41 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Invitx - Home</title>
+    <title>Invitx Profile - Create and Share Personal Digital Cards</title>
+    <!-- Meta description and keywords for SEO -->
+    <meta name="description" content="Create personalized digital business cards with Invitx. Easily share your contact info and social media details with others.">
+    <meta name="keywords" content="digital business card, Invitx, contact sharing, social media, profile">
+    <meta name="robots" content="index, follow"> <!-- Allow indexing and following -->
+    <meta http-equiv="Content-Language" content="en"> <!-- Language code (e.g., en for English) -->
+    <meta name="author" content="ThinkerBytes">
+
+
+
+    <!-- Open Graph tags for social media sharing -->
+    <meta property="og:title" content="Invitx Profile - Create and Share Personal Digital Cards">
+    <meta property="og:description" content="Create personalized digital business cards with Invitx. Easily share your contact info and social media details with others.">
+    <meta property="og:image" content="https://example.com/path/to/your-image.jpg"> <!-- A representative image -->
+    <meta property="og:url" content="https://invitx.github.io/"> <!-- Your web app's URL -->
+
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
     <link rel="stylesheet" href="css/style.css">
     <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <script type="application/ld+json">
+        {
+          "@context": "http://schema.org",
+          "@type": "ProfilePage",
+          "name": "Invitx Profile",
+          "description": "Create personalized digital business cards with Invitx. Share your contact info and social media details.",
+          "url": "https://invitx.github.io/",
+          "author": {
+            "@type": "Organization",
+            "name": "ThinkerBytes"
+          }
+        }
+        </script>
+        
     <!-- Firebase JS SDK -->
     <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-app.js"></script>
     <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-auth.js"></script>

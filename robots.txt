@@ -1,0 +1,5 @@
+# robots.txt
+User-agent: *
+Disallow: /private/ # If you have private directories
+Allow: /
+Sitemap: https://invitx.github.io/sitemap.xml
