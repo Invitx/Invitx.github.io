@@ -114,6 +114,10 @@
                         $('#google-location-section').show(); // Display Get Directions section
                     }
 
+                    // Display the share button
+                    $('#share-button').show();
+                    $('#create-profile-button').show();
+
                     $('#share-button').click(function() {
                         // Get the current profile data
                         const profileUrl = window.location.href; // URL of the current profile page
